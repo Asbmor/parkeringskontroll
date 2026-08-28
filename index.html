@@ -4,12 +4,12 @@
 <section class="card scanCard"><h2>Skann bilskilt</h2>
 <button id="liveBtn" class="primary">📷 Start live-kamera</button>
 <div id="liveWrap" class="liveWrap" hidden><video id="video" autoplay playsinline muted></video><div class="shade top"></div><div class="shade bottom"></div><div class="shade left"></div><div class="shade right"></div><div class="guide"><span>PLASSER SKILTET HER</span></div></div>
-<div id="liveControls" class="liveControls" hidden><button id="stopBtn" class="secondary wide">Stopp kamera</button></div>
-<p class="hint">Plasser hele registreringsnummeret i rammen. Appen slår først opp når den har lest 2 bokstaver + 5 sifre.</p>
+<div id="liveControls" class="liveControls" hidden><button id="readBtn" class="readBtn">LES SKILT</button><button id="stopBtn" class="secondary wide">Stopp kamera</button></div>
+<p class="hint">Plasser hele registreringsnummeret i rammen og trykk LES SKILT. Kameraet forblir aktivt etter oppslaget, så du kan gå rett videre til neste bil.</p>
 <div id="scanStatus" class="scanStatus" hidden></div><canvas id="crop" hidden></canvas><details class="debug"><summary>Diagnose: hva OCR ser</summary><img id="debugImage" class="debugImage" alt="Utsnitt sendt til OCR" hidden><pre id="debugText">Ingen skanning ennå.</pre></details>
 <details class="fallback"><summary>Reserve: ta et bilde</summary><label class="camera">📷 Ta bilde av skilt<input id="camera" type="file" accept="image/*" capture="environment"></label><img id="preview" class="preview" alt="Bilde av skilt" hidden></details>
 </section>
 <section class="card"><label for="q">Registreringsnummer</label><div class="search"><input id="q" maxlength="8" autocomplete="off" autocapitalize="characters" inputmode="text" placeholder="f.eks. EV 12345"><button id="clear" aria-label="Tøm">×</button></div><div id="result" class="result idle"><strong>Klar for oppslag</strong><span>Importer listen og skann eller skriv inn et bilnummer.</span></div></section>
 <section class="card"><label class="import">Importer Excel<input id="file" type="file" accept=".xlsx,.xls"></label><p class="hint">Forventede kolonner: <b>Navn</b> og <b>Registreringsnummer</b>.</p></section>
 <section class="card"><h2>Liste</h2><div class="stats"><span id="count">0 registreringsnummer</span><button id="forget" class="secondary">Slett lokal liste</button></div></section>
-<footer>V0.4 • Forbedret skiltlesing</footer></main><script src="app.js"></script></body></html>
+<footer>V0.5 • Manuell skanning</footer></main><script src="app.js"></script></body></html>
